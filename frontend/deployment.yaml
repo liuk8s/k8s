@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: liuzy163/frontend
+        env:
+        - name: APP_GREETING_NAME
+          value: frontend_minikube_deplyment_yaml
+        - name: APP_SERVER_URL
+          value: http://backend:8080
+        ports:
+        - containerPort: 9090
