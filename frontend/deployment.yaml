@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: liuzy163/frontend
+        image: liuk8s/telepresence:frontend
         env:
         - name: APP_GREETING_NAME
           value: frontend_minikube_deplyment_yaml

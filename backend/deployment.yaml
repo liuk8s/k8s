@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: liuzy163/backend
+        image: liuk8s/telepresence:backend
         env:
         - name: APP_GREETING_NAME
           value: backend_minikube_deployment_yaml

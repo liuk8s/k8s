@@ -4,7 +4,6 @@ metadata:
   name: backend
   labels:
     app: backend
-    tier: backend
 spec:
   type: NodePort
   ports:
@@ -12,4 +11,3 @@ spec:
     nodePort: 31080
   selector:
     app: backend
-    tier: backend
